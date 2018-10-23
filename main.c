@@ -3,8 +3,8 @@
 #include "sieve.h"
 
 int main(int argc, char * argv[]){
-  int iterations = 1;
-  int target = 1000000;
+  int iterations = 11;
+  int target = 1;
   if(argc > 1){
     target = atoi(argv[1]);
   }
@@ -21,9 +21,10 @@ int main(int argc, char * argv[]){
 
     //this is to modify which prime to
     //potentially avoid CPU caching
-    target++;
+    target += 100000;
 
   }
+  printf("Annnnnd going back one, the n=1000000 prime is %d\n", sieve(1000000));
   return 0;
 
 }
